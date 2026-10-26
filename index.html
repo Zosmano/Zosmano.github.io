@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Osman Zakaria Portfolio</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a ledger. Each project is a ruled row with mono labels; one scaled bar chart carries the payroll audit. */
+:root{
+  --bg:#F2F5F6; --surface:#FFFFFF; --fg:#10201F; --muted:#51635F; --rule:#CBD6D4;
+  --accent:#0B6B5D; --accent-ink:#FFFFFF; --bar:#0B6B5D; --bar-track:#E0E8E6;
+  --display:'Bricolage Grotesque','Segoe UI',system-ui,sans-serif;
+  --body:'IBM Plex Sans','Segoe UI',system-ui,sans-serif;
+  --mono:'IBM Plex Mono',ui-monospace,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0D1616; --surface:#142120; --fg:#E7F0EE; --muted:#9DB2AD; --rule:#2A3D3A;
+  --accent:#4FD1B8; --accent-ink:#06201B; --bar:#4FD1B8; --bar-track:#1F3230; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0D1616; --surface:#142120; --fg:#E7F0EE; --muted:#9DB2AD; --rule:#2A3D3A;
+  --accent:#4FD1B8; --accent-ink:#06201B; --bar:#4FD1B8; --bar-track:#1F3230; color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 var(--body);
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0}
+.wrap{max-width:980px;margin:0 auto;padding-block:48px 72px}
+a{color:var(--accent);text-decoration-thickness:1px;text-underline-offset:3px}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
+.mono{font-family:var(--mono);font-size:12.5px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted)}
+header{display:grid;gap:20px;padding-bottom:36px;border-bottom:2px solid var(--fg)}
+h1{font:700 clamp(2.4rem,7vw,4.4rem)/1.02 var(--display);margin:0;letter-spacing:-.02em;text-wrap:balance}
+.lede{font-size:1.15rem;max-width:62ch;margin:0;text-wrap:pretty}
+.links{display:flex;flex-wrap:wrap;gap:10px;margin-top:4px}
+.btn{display:inline-block;padding:9px 16px;border:1px solid var(--fg);color:var(--fg);text-decoration:none;font:500 14px var(--body);border-radius:3px}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.btn:hover{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+.btn.primary:hover{filter:brightness(1.1);background:var(--accent);color:var(--accent-ink)}
+section{padding-top:44px}
+h2{font:700 1.6rem/1.2 var(--display);margin:0 0 6px}
+.sub{margin:0 0 22px;color:var(--muted);max-width:64ch}
+.row{display:grid;grid-template-columns:200px minmax(0,1fr);gap:8px 32px;padding:26px 0;border-top:1px solid var(--rule)}
+.row:last-of-type{border-bottom:1px solid var(--rule)}
+.meta{display:flex;flex-direction:column;gap:6px;min-width:0}
+.row h3{font:700 1.25rem/1.25 var(--display);margin:0 0 8px}
+.row p{margin:0 0 10px;max-width:66ch}
+.tools{font-family:var(--mono);font-size:12.5px;color:var(--muted);margin:0}
+.tag{display:inline-block;font:500 11.5px var(--mono);letter-spacing:.05em;text-transform:uppercase;border:1px solid var(--rule);padding:2px 8px;border-radius:2px;color:var(--muted);width:max-content}
+.result{font:700 clamp(1.6rem,4vw,2.1rem)/1.1 var(--display);color:var(--accent);margin:0}
+.rowlinks{display:flex;flex-wrap:wrap;gap:6px 18px;margin-top:6px;font-size:15px}
+.chart{margin:14px 0 6px;display:grid;gap:9px;max-width:620px}
+.bar{display:grid;grid-template-columns:150px minmax(0,1fr) 84px;gap:10px;align-items:center;font-size:13.5px}
+.bar .track{height:12px;background:var(--bar-track);border-radius:2px;overflow:hidden}
+.bar .fill{display:block;height:100%;background:var(--bar)}
+.bar .v{font-family:var(--mono);font-size:12.5px;text-align:right}
+.note{font-size:13.5px;color:var(--muted);max-width:66ch;margin:6px 0 0}
+.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 32px}
+.item{padding:14px 0;border-top:1px solid var(--rule);min-width:0}
+.item b{font-weight:500}
+.item span{display:block;color:var(--muted);font-size:14.5px}
+.contact{display:flex;flex-wrap:wrap;gap:12px 28px;align-items:center}
+.copy{font:500 13px var(--mono);background:var(--surface);color:var(--fg);border:1px solid var(--rule);padding:7px 12px;border-radius:3px;cursor:pointer}
+footer{margin-top:56px;padding-top:18px;border-top:2px solid var(--fg)}
+@media (max-width:720px){
+  .row{grid-template-columns:minmax(0,1fr);gap:6px}
+  .two{grid-template-columns:minmax(0,1fr)}
+  .bar{grid-template-columns:minmax(0,1fr) 78px;row-gap:4px}
+  .bar .track{grid-column:1 / -1;order:3}
+  .wrap{padding-block:32px 56px}
+}
+@media (prefers-reduced-motion:no-preference){.btn{transition:background .15s,color .15s}}
+</style>
+
+<div class="wrap">
+<header>
+  <div class="mono">Data and research analyst &middot; Vancouver, BC</div>
+  <h1>Osman Zakaria, PMP</h1>
+  <p class="lede">I find the errors, anomalies and cost leaks hidden in large records, then turn what I find into SQL checks, dashboards and models that others can rerun. Master of Professional Studies in Analytics (Northeastern University), with 9+ years across payroll analysis, project coordination and research.</p>
+  <div class="links">
+    <a class="btn primary" href="#work">See selected work</a>
+    <a class="btn" href="https://github.com/Zosmano" target="_blank" rel="noopener">GitHub</a>
+    <a class="btn" href="https://www.linkedin.com/in/osmanzakaria" target="_blank" rel="noopener">LinkedIn</a>
+  </div>
+</header>
+
+<section id="work">
+  <h2>Selected work</h2>
+  <p class="sub">Five projects. Where the data is synthetic, the row says so.</p>
+
+  <article class="row">
+    <div class="meta"><span class="tag">Public DOT data</span><span class="mono">Python &middot; SQL &middot; SQLite</span></div>
+    <div>
+      <p class="result">96 of 96 DOT figures reproduced</p>
+      <h3>U.S. flight delay pipeline, January to July 2026</h3>
+      <p>An end-to-end Python and SQL pipeline that loads seven monthly Bureau of Transportation Statistics files (4,120,342 domestic flights, 13 carriers, 357 airports) into SQLite, runs 12 data-quality checks, and recomputes on-time rates for every carrier and month. All 96 recomputed figures match the Department of Transportation's published Air Travel Consumer Report within its rounding band.</p>
+      <p>Findings: on-time rank and disruption risk differ. Southwest is 7th of 13 on on-time arrivals (73.7%) but has the second-lowest rate of 3-hour-plus delays, 78 per 10,000 flights against 320 for PSA. Delays also cascade through the day: 91.5% of flights scheduled at 5 a.m. arrive on time, against 66.3% at 8 p.m.</p>
+      <p>A Simpson's paradox check of all 78 carrier pairs found rankings that reverse at comparable airports. American trails Southwest overall (71.8% against 73.7%) but is 2.2 points ahead at the same airports in the same months, with a 95% interval of +1.9 to +2.4. American wins about half of the compared airport-months, so the lead comes from the large ones.</p>
+      <p class="note">Covers reporting carriers only. Delay causes are the airlines' own attribution, and "late aircraft" delay can start with weather on an earlier leg.</p>
+      <div class="rowlinks">
+        <a href="https://github.com/Zosmano/flight-delay-pipeline" target="_blank" rel="noopener">Code, SQL and README on GitHub</a>
+      </div>
+    </div>
+  </article>
+
+  <article class="row">
+    <div class="meta"><span class="tag">Research</span><span class="mono">Python &middot; CatBoost &middot; XGBoost</span></div>
+    <div>
+      <p class="result">76% vs ~52%</p>
+      <h3>Participatory-democracy case classifier</h3>
+      <p>A hybrid CatBoost and XGBoost ensemble that classifies 2.26K+ global participatory-democracy cases from Participedia data and forecasts annual case volumes through 2030. Accuracy is 76% against baseline models near 52%. A related research paper is under review at Taylor &amp; Francis.</p>
+    </div>
+  </article>
+
+  <article class="row">
+    <div class="meta"><span class="tag">Public data</span><span class="mono">Power BI &middot; SQL &middot; SQLite</span></div>
+    <div>
+      <h3>Canadian household energy, 2011 to 2021</h3>
+      <p>A Power BI dashboard on Statistics Canada data for 10 provinces, with slicer filtering and DAX measures built around a 70.84 GJ national benchmark. A matching SQL analysis of 989 provincial observations ranks provinces against that benchmark (Alberta is highest at +11.4 GJ) and reproduces the dashboard figure, so the two tools cross-check each other.</p>
+      <div class="rowlinks">
+        <a href="https://app.powerbi.com/view?r=eyJrIjoiMWFlMjQxZTUtNTVlYi00MjMzLWIzODAtMzk3MjE3ZDQyZjE3IiwidCI6ImM3ZTc5YjlkLWVjZTktNDEzMy04NzQzLWI2Y2FkMjZjNTc0ZiIsImMiOjEwfQ%3D%3D" target="_blank" rel="noopener">Open the dashboard</a>
+        <a href="https://github.com/Zosmano/Household-Energy_SQL_Analysis" target="_blank" rel="noopener">SQL analysis on GitHub</a>
+      </div>
+    </div>
+  </article>
+
+  <article class="row">
+    <div class="meta"><span class="tag">Research data</span><span class="mono">Power BI &middot; Power Query</span></div>
+    <div>
+      <h3>Global Democratic Governance dashboard</h3>
+      <p>A three-page Power BI report relating each country's governance variables (Gini index, Freedom House scores, internet penetration) to its participatory-democracy cases and preferred methods. A Power Query pipeline cleans and normalizes entries across 2.26K+ cases.</p>
+      <div class="rowlinks">
+        <a href="https://app.powerbi.com/view?r=eyJrIjoiZmFlMDhlMTEtOWE3NC00ZTRhLWFjNjEtZGY2ZGRiOGVkMGVlIiwidCI6ImM3ZTc5YjlkLWVjZTktNDEzMy04NzQzLWI2Y2FkMjZjNTc0ZiIsImMiOjEwfQ%3D%3D" target="_blank" rel="noopener">Open the dashboard</a>
+      </div>
+    </div>
+  </article>
+
+  <article class="row">
+    <div class="meta"><span class="tag">Synthetic data</span><span class="mono">Tableau</span></div>
+    <div>
+      <h3>Executive Portfolio Diagnostic Suite</h3>
+      <p>A Tableau dashboard on a synthetic enterprise PMO dataset of 1M+ records across 50 projects. It tracks resource allocation, cost variance and schedule performance.</p>
+      <div class="rowlinks">
+        <a href="https://public.tableau.com/app/profile/osman.zakaria/viz/ExecutiveDashboard_Tableau_17897535940690/PortfolioPerformanceCostVariance" target="_blank" rel="noopener">Open on Tableau Public</a>
+      </div>
+    </div>
+  </article>
+</section>
+
+<section>
+  <h2>Where the skills come from</h2>
+  <p class="sub">Professional work behind the projects.</p>
+  <div class="two">
+    <div class="item"><b>AI Data Analysis Task Developer</b><span>Handshake AI, contract, Sept 2026 to present. Reviews AI-generated analyses against rubrics and writes expert-level analysis tasks.</span></div>
+    <div class="item"><b>Research Analyst</b><span>Participedia, Dec 2024 to present. Machine learning, Power BI reporting and data validation.</span></div>
+    <div class="item"><b>Payroll Project Coordinator</b><span>Controller and Accountant General's Department, Ghana, 2014 to 2017. Reconciled payroll records for 600,000+ employees and flagged anomalies behind US$1.3M in annual savings, during a World Bank-sponsored move to electronic salary validation.</span></div>
+    <div class="item"><b>Educational Project Coordinator</b><span>Ghana Education Service, 2017 to 2023. Trained 50+ staff on data tracking and coordinated multi-site schedules.</span></div>
+  </div>
+</section>
+
+<section>
+  <h2>Credentials and tools</h2>
+  <div class="two">
+    <div class="item"><b>Credentials</b><span>Project Management Professional (PMP), 2025. Master of Professional Studies in Analytics, Northeastern University. BSc Business Administration.</span></div>
+    <div class="item"><b>Tools</b><span>Power BI (DAX, Power Query), Tableau, SQL (PostgreSQL, MySQL, SQLite), Python (pandas, CatBoost, XGBoost), advanced Excel.</span></div>
+  </div>
+</section>
+
+<section>
+  <h2>Get in touch</h2>
+  <div class="contact">
+    <span id="mail">zosman50@gmail.com</span>
+    <button class="copy" id="copybtn" type="button">Copy email</button>
+    <a href="https://www.linkedin.com/in/osmanzakaria" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="https://github.com/Zosmano" target="_blank" rel="noopener">GitHub</a>
+  </div>
+</section>
+
+<footer class="mono">Osman Zakaria &middot; Vancouver, British Columbia, Canada</footer>
+</div>
+
+<script>
+(function(){
+  var b=document.getElementById('copybtn'),m=document.getElementById('mail');
+  b.addEventListener('click',function(){
+    var t=m.textContent;
+    function done(s){b.textContent=s;setTimeout(function(){b.textContent='Copy email'},1800)}
+    function sel(){var r=document.createRange();r.selectNodeContents(m);var s=window.getSelection();s.removeAllRanges();s.addRange(r);done('Selected, press copy')}
+    try{ if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(function(){done('Copied')},sel)} else sel() }catch(e){sel()}
+  });
+})();
+</script>
+
+</html>
