@@ -45,7 +45,7 @@ h2{font:700 1.6rem/1.2 var(--display);margin:0 0 6px}
 .row p{margin:0 0 10px;max-width:66ch}
 .tools{font-family:var(--mono);font-size:12.5px;color:var(--muted);margin:0}
 .tag{display:inline-block;font:500 11.5px var(--mono);letter-spacing:.05em;text-transform:uppercase;border:1px solid var(--rule);padding:2px 8px;border-radius:2px;color:var(--muted);width:max-content}
-.result{font:700 clamp(1.6rem,4vw,2.1rem)/1.1 var(--display);color:var(--accent);margin:0}
+.result{font:700 clamp(1.6rem,4vw,2.1rem)/1.1 var(--display);color:var(--accent);margin:0;text-wrap:balance}
 .rowlinks{display:flex;flex-wrap:wrap;gap:6px 18px;margin-top:6px;font-size:15px}
 .chart{margin:14px 0 6px;display:grid;gap:9px;max-width:620px}
 .bar{display:grid;grid-template-columns:150px minmax(0,1fr) 84px;gap:10px;align-items:center;font-size:13.5px}
@@ -84,7 +84,21 @@ footer{margin-top:56px;padding-top:18px;border-top:2px solid var(--fg)}
 
 <section id="work">
   <h2>Selected work</h2>
-  <p class="sub">Six projects. Where the data is synthetic, the row says so.</p>
+  <p class="sub">Seven projects. Where the data is synthetic, the row says so.</p>
+
+  <article class="row">
+    <div class="meta"><span class="tag">Public data</span><span class="mono">Python &middot; JavaScript &middot; Road network</span></div>
+    <div>
+      <p class="result">Two plants idle. 3,960 workers laid off. What&rsquo;s&nbsp;next?</p>
+      <h3>Next Shift: Ontario autoworker job match</h3>
+      <p>An interactive tool for workers laid off at Stellantis Brampton and GM CAMI Ingersoll. A worker picks a plant job and a longest drive, and the tool ranks Ontario occupations by skill fit (using ESDC's OaSIS skills ratings), openings from Job Bank within a rush-hour drive on the Statistics Canada road network, pay, and training time, then lists nearby college programs and funding. It is built on 89,557 Job Bank postings, 516 occupations and Statistics Canada road-network drive times.</p>
+      <p>A planning view estimates how many of these workers local openings could absorb within a year and where retraining helps most. A new-products view tests how much of a retooled plant's hourly workforce the laid-off workers could fill.</p>
+      <p class="note">Independent analysis from public data. Postings are not hires, and the plant workforce mix and the share of openings workers can win are adjustable assumptions, not union data.</p>
+      <div class="rowlinks">
+        <a href="https://claude.ai/artifact/TosuEsDPFk3BEKgXYeCTBy" target="_blank" rel="noopener">Open the tool</a>
+      </div>
+    </div>
+  </article>
 
   <article class="row">
     <div class="meta"><span class="tag">Public and licensed data</span><span class="mono">Python &middot; Census 2021 &middot; Optimization</span></div>
