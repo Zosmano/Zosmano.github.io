@@ -146,9 +146,45 @@ footer .in{border-top:1px solid rgba(255,255,255,.18);padding-top:20px}
 <section class="sec" id="work">
   <div class="in">
     <h2>Selected work</h2>
-    <p class="sub">Four projects built on public data, each with its method and limits written down. Where data is synthetic, the project says so.</p>
+    <p class="sub">Six projects built on public data, each with its method and limits written down. Where data is synthetic, the project says so.</p>
 
     <div class="feats">
+
+      <article class="feat">
+        <div class="feat-head">
+          <span class="tag">Public data</span>
+          <p class="result">2,260 participatory processes. Which designs leave a mark?</p>
+          <p class="stack">Python, logistic regression, JavaScript</p>
+        </div>
+        <div class="feat-body">
+          <h3>Participation Design Advisor</h3>
+          <p>A tool for anyone planning a citizens' assembly, participatory budget or public consultation. You describe the design (who takes part, how much power they get, how decisions are made, whether it will be evaluated) and it estimates the chance the process documents real impact, ranks the changes that would raise it, and lists the closest past cases. It learns from 2,260 Participedia cases in 124 countries, plus 356 cases added to Participedia since. Planning a formal evaluation is the strongest lever (+11 points), yet only 15% of processes do it.</p>
+          <details>
+            <summary>Method and limits</summary>
+            <p>A regularized logistic regression (AUC 0.91 on held-out cases) scores each design in the browser. Every effect holds documentation fixed, because thin entries rarely record impact whatever happened. A context check shows how common a recruitment method is in countries like yours, from the companion research paper (under review).</p>
+            <p class="note">Documented impact is not proof of impact, and the archive is crowd-sourced. Associations, not causes. Not an official Participedia product.</p>
+          </details>
+          <div class="links"><a href="https://zosmano.github.io/Participedia-Design-Advisor/docs/" target="_blank" rel="noopener">Open the advisor</a> <a href="https://github.com/Zosmano/Participedia-Design-Advisor" target="_blank" rel="noopener">Code and README on GitHub</a></div>
+        </div>
+      </article>
+
+      <article class="feat">
+        <div class="feat-head">
+          <span class="tag">Public data and simulation</span>
+          <p class="result">86% of 524 real construction incidents flagged in advance</p>
+          <p class="stack">Python, gradient boosting, JavaScript</p>
+        </div>
+        <div class="feat-body">
+          <h3>Site Safety Early Warning</h3>
+          <p>An early-warning system for construction sites in British Columbia, Ontario and Alberta. Each work day it scores every zone's risk of an injury or high-potential near miss over the next five work days, names the warning signs, and cites the control from each province's OHS regulation. It also checks a three-week look-ahead for clashes (a crane lift in high wind, crowded zones), estimates the premium and COR savings from prevention, and takes near-miss reports in seven languages.</p>
+          <details>
+            <summary>Method, real-world check and limits</summary>
+            <p>The zone model is trained on 30 simulated sites calibrated to WorkSafeBC, AWCBC and Statistics Canada injury rates and run on real Environment Canada weather; it flags 84% of test-period events (AUC 0.75 against 0.66 for the crew schedule alone). Because real site logs are private, the approach was also tested on New York City's public records: across 37,000 sites, red-flagged weeks carried 11.6 times the average incident rate.</p>
+            <p class="note">The site logs are simulated, so a pilot on a contractor's own records is the real test. Independent work, not affiliated with WorkSafeBC, the WSIB or Alberta OHS.</p>
+          </details>
+          <div class="links"><a href="https://github.com/Zosmano/construction-safety-early-warning" target="_blank" rel="noopener">Code, dashboards and README on GitHub</a></div>
+        </div>
+      </article>
 
       <article class="feat">
         <div class="feat-head">
