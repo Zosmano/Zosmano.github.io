@@ -4,7 +4,7 @@
 
 I find the errors, anomalies and cost leaks hidden in large records, then turn what I find into SQL checks, dashboards and models that others can rerun. Master of Professional Studies in Analytics (Northeastern University); PMP; six years across payroll analysis, project coordination and research.
 
-[![Portfolio](https://img.shields.io/badge/zosmano.github.io-2B1B3D?style=for-the-badge)](https://zosmano.github.io)
+[![Portfolio](https://img.shields.io/badge/Portfolio-2B1B3D?style=for-the-badge)](https://zosmano.github.io)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/osmanzakaria)
 
 ## Selected work
@@ -33,4 +33,4 @@ Dashboard links and project details are on the [portfolio site](https://zosmano.
 
 The portfolio is a single self-contained page, [`index.html`](index.html), served by GitHub Pages from the `main` branch. There is no build step: edit the file and push.
 
-Contact: zosman50@gmail.com
+[![Email](https://img.shields.io/badge/zosman50%40gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:zosman50@gmail.com)
