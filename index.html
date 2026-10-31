@@ -146,7 +146,7 @@ footer .in{border-top:1px solid rgba(255,255,255,.18);padding-top:20px}
 <section class="sec" id="work">
   <div class="in">
     <h2>Selected work</h2>
-    <p class="sub">Six projects built on public data, each with its method and limits written down. Where data is synthetic, the project says so.</p>
+    <p class="sub">Seven projects, each with its method and limits written down. Where data is synthetic or comes from a survey, the project says so.</p>
 
     <div class="feats">
 
@@ -182,7 +182,7 @@ footer .in{border-top:1px solid rgba(255,255,255,.18);padding-top:20px}
             <p>The zone model is trained on 30 simulated sites calibrated to WorkSafeBC, AWCBC and Statistics Canada injury rates and run on real Environment Canada weather; it flags 84% of test-period events (AUC 0.75 against 0.66 for the crew schedule alone). Because real site logs are private, the approach was also tested on New York City's public records: across 37,000 sites, red-flagged weeks carried 11.6 times the average incident rate.</p>
             <p class="note">The site logs are simulated, so a pilot on a contractor's own records is the real test. Independent work, not affiliated with WorkSafeBC, the WSIB or Alberta OHS.</p>
           </details>
-          <div class="links"><a href="https://github.com/Zosmano/construction-safety-early-warning" target="_blank" rel="noopener">Code, dashboards and README on GitHub</a></div>
+          <div class="links"><a href="https://claude.ai/artifact/7YTTA3WRJAfJstwjaZGdb6" target="_blank" rel="noopener">Open the live dashboard</a> <a href="https://github.com/Zosmano/construction-safety-early-warning" target="_blank" rel="noopener">Code, dashboards and README on GitHub</a></div>
         </div>
       </article>
 
@@ -200,7 +200,7 @@ footer .in{border-top:1px solid rgba(255,255,255,.18);padding-top:20px}
             <p>The page shows what drives growth by procurement method, commodity, value, length and department, and includes a risk check that estimates the chance a new contract grows 25% or more from what is known at award, a watch list of recent high-risk awards, and the 40 largest increases. The risk model is a regularised logistic regression trained on awards to March 2021 and tested on the two years after. Reviewing the riskiest 10% of new contracts catches 39% of those that later grow 25% or more, which helps target change control where it matters.</p>
             <p class="note">An amendment is not an overrun: many large contracts grow by design through options and phases. Rates are a floor because some amendments cannot be matched to an award. Independent analysis of public data, not affiliated with the Government of Canada.</p>
           </details>
-          <div class="links"><a href="https://claude.ai/artifact/4z9ZPCezsJwN5r1m1py6Wy" target="_blank" rel="noopener">Explore the analysis</a></div>
+          <div class="links"><a href="https://claude.ai/artifact/4z9ZPCezsJwN5r1m1py6Wy" target="_blank" rel="noopener">Explore the analysis</a> <a href="https://github.com/Zosmano/federal-contract-change-orders" target="_blank" rel="noopener">Code and README on GitHub</a></div>
         </div>
       </article>
 
@@ -218,7 +218,7 @@ footer .in{border-top:1px solid rgba(255,255,255,.18);padding-top:20px}
             <p>A planning view estimates how many of these workers local openings could absorb within a year and where retraining helps most. A new-products view tests how much of a retooled plant's hourly workforce the laid-off workers could fill.</p>
             <p class="note">Independent analysis from public data. Postings are not hires, and the plant workforce mix and the share of openings workers can win are adjustable assumptions, not union data.</p>
           </details>
-          <div class="links"><a href="https://claude.ai/artifact/TosuEsDPFk3BEKgXYeCTBy" target="_blank" rel="noopener">Open the tool</a></div>
+          <div class="links"><a href="https://claude.ai/artifact/TosuEsDPFk3BEKgXYeCTBy" target="_blank" rel="noopener">Open the tool</a> <a href="https://github.com/Zosmano/autoworker-transition-platform" target="_blank" rel="noopener">Code and README on GitHub</a></div>
         </div>
       </article>
 
@@ -236,7 +236,7 @@ footer .in{border-top:1px solid rgba(255,255,255,.18);padding-top:20px}
             <p>It also includes an early-warning model for business customer churn, a ranked sales call list, and an allocation of the 79 million-piece (32.6%) drop in 2025 parcel volume across areas by modelled demand, to set win-back sales targets.</p>
             <p class="note">Independent analysis, not produced by or affiliated with Canada Post. The churn model runs on 8,000 simulated business customers because no real customer data is public. The saving is a model estimate based on stated assumptions; it is above the government's ~$400M figure, and route-level checks suggest it is conservative.</p>
           </details>
-          <div class="links"><a href="https://claude.ai/artifact/J7girjpym3SAGt3zXGScmi" target="_blank" rel="noopener">Read the analysis</a></div>
+          <div class="links"><a href="https://claude.ai/artifact/J7girjpym3SAGt3zXGScmi" target="_blank" rel="noopener">Read the analysis</a> <a href="https://github.com/Zosmano/canada-post-turnaround-analytics" target="_blank" rel="noopener">Code and README on GitHub</a></div>
         </div>
       </article>
 
@@ -256,6 +256,24 @@ footer .in{border-top:1px solid rgba(255,255,255,.18);padding-top:20px}
             <p class="note">Covers reporting carriers only. Delay causes are the airlines' own attribution, and "late aircraft" delay can start with weather on an earlier leg.</p>
           </details>
           <div class="links"><a href="https://github.com/Zosmano/flight-delay-pipeline" target="_blank" rel="noopener">Code, SQL and README on GitHub</a></div>
+        </div>
+      </article>
+
+      <article class="feat">
+        <div class="feat-head">
+          <span class="tag">Primary survey data</span>
+          <p class="result">98% pay by mobile money. 22% trust AI to tax them fairly.</p>
+          <p class="stack">Python, survey statistics, dashboards</p>
+        </div>
+        <div class="feat-body">
+          <h3>AI and big data for African tax reform: Ghana's informal sector</h3>
+          <p>The evidence base for a policy paper on widening the tax base in Sub-Saharan Africa's informal sector, with Ghana as the case study and Kenya and South Africa as comparators. A Python pipeline turns 53 hand-coded questionnaires from artisans, traders, drivers and farmers, a survey of 21 tax and finance professionals and MTN Ghana's responses into tested statistics, a check of the paper's figures and seven dashboards. The rails for digital taxation exist; trust does not: 74% cite distrust of government as a reason they don't pay tax.</p>
+          <details>
+            <summary>Findings and limits</summary>
+            <p>Awareness, not income, decides acceptance: 56% of workers who have heard of AI view it positively, against 3% of the rest (Fisher exact p &lt; 0.001), while income shows no link (Spearman &rho; = &minus;0.07). Workers fall into three readiness segments (26% ready, 35% persuadable, 39% resistant), each needing a different policy. Professionals rank transparency in how taxes are spent as the strongest compliance lever. 27 of the paper's 29 figures match the coded forms within 5 points.</p>
+            <p class="note">A small, purposive Ghana sample: it shows patterns and policy levers, not national prevalence.</p>
+          </details>
+          <div class="links"><a href="https://claude.ai/artifact/PoP5JUqWaH6RK664eH1dBY" target="_blank" rel="noopener">Open the dashboard</a> <a href="https://github.com/Zosmano/african-ai-tax-reform" target="_blank" rel="noopener">Code and README on GitHub</a></div>
         </div>
       </article>
 
@@ -282,14 +300,14 @@ footer .in{border-top:1px solid rgba(255,255,255,.18);padding-top:20px}
           <div><h4>Global Democratic Governance dashboard</h4><p class="t">Research data: Power BI, Power Query</p></div>
           <div>
             <p>A three-page Power BI report relating each country's governance variables (Gini index, Freedom House scores, internet penetration) to its participatory-democracy cases and preferred methods. A Power Query pipeline cleans and normalizes entries across 2.26K+ cases.</p>
-            <div class="links"><a href="https://app.powerbi.com/view?r=eyJrIjoiZmFlMDhlMTEtOWE3NC00ZTRhLWFjNjEtZGY2ZGRiOGVkMGVlIiwidCI6ImM3ZTc5YjlkLWVjZTktNDEzMy04NzQzLWI2Y2FkMjZjNTc0ZiIsImMiOjEwfQ%3D%3D" target="_blank" rel="noopener">Open the dashboard</a></div>
+            <div class="links"><a href="https://app.powerbi.com/view?r=eyJrIjoiZmFlMDhlMTEtOWE3NC00ZTRhLWFjNjEtZGY2ZGRiOGVkMGVlIiwidCI6ImM3ZTc5YjlkLWVjZTktNDEzMy04NzQzLWI2Y2FkMjZjNTc0ZiIsImMiOjEwfQ%3D%3D" target="_blank" rel="noopener">Open the dashboard</a> <a href="https://github.com/Zosmano/Participedia-Global-Research-Dashboard" target="_blank" rel="noopener">Project on GitHub</a></div>
           </div>
         </div>
         <div class="item">
           <div><h4>Executive Portfolio Diagnostic Suite</h4><p class="t">Synthetic data: Tableau</p></div>
           <div>
             <p>A Tableau dashboard on a synthetic enterprise PMO dataset of 1M+ records across 50 projects. It tracks resource allocation, cost variance and schedule performance.</p>
-            <div class="links"><a href="https://public.tableau.com/app/profile/osman.zakaria/viz/ExecutiveDashboard_Tableau_17897535940690/PortfolioPerformanceCostVariance" target="_blank" rel="noopener">Open on Tableau Public</a></div>
+            <div class="links"><a href="https://public.tableau.com/app/profile/osman.zakaria/viz/ExecutiveDashboard_Tableau_17897535940690/PortfolioPerformanceCostVariance" target="_blank" rel="noopener">Open on Tableau Public</a> <a href="https://github.com/Zosmano/Executive-Portfolio-Diagnostic-Suite-1M-Records-" target="_blank" rel="noopener">Project on GitHub</a></div>
           </div>
         </div>
       </div>
