@@ -23,6 +23,7 @@ I find the errors, anomalies and cost leaks hidden in large records, then turn w
 
 | Project | Built with | Links |
 |---|---|---|
+| Participatory-democracy case classifier (research paper under review) | Python, CatBoost, XGBoost | [Model and code](https://github.com/Zosmano/Participedia-Design-Advisor#participatory-democracy-case-classifier) |
 | Canadian household energy, 2011 to 2021 | Power BI, SQL, SQLite | [Code](https://github.com/Zosmano/Household-Energy_SQL_Analysis) |
 | Global Democratic Governance dashboard (Participedia) | Power BI, Power Query | [Dashboard](https://app.powerbi.com/view?r=eyJrIjoiZmFlMDhlMTEtOWE3NC00ZTRhLWFjNjEtZGY2ZGRiOGVkMGVlIiwidCI6ImM3ZTc5YjlkLWVjZTktNDEzMy04NzQzLWI2Y2FkMjZjNTc0ZiIsImMiOjEwfQ%3D%3D) · [Report file](https://github.com/Zosmano/Participedia-Design-Advisor#companion-power-bi-dashboard) |
 | Executive Portfolio Diagnostic Suite (synthetic PMO data, 1M+ records) | Tableau | [Project](https://github.com/Zosmano/Executive-Portfolio-Diagnostic-Suite-1M-Records-) |
