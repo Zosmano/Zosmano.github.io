@@ -265,6 +265,25 @@ footer .in{border-top:1px solid rgba(255,255,255,.18);padding-top:20px}
 
       <article class="feat">
         <div class="feat-head">
+          <span class="tag">Public retail transaction data</span>
+          <p class="result">Top 10 customers: 16.3% of net sales. Top 10 products: 7.6%.</p>
+          <p class="stack">Excel, Power Query, Power Pivot, DAX</p>
+        </div>
+        <div class="feat-body">
+          <h3>Retail sales BI model and dashboard, 1M+ transactions</h3>
+          <p>An end-to-end business intelligence model built in Excel on 1,067,371 online retail transactions from December 2009 to December 2011. Power Query appends two source files, cleans them and removes 34,335 duplicates; Power Pivot holds a star schema with a marked date table; and a DAX measure layer drives a dashboard filtered by a date timeline and year and country slicers. Gross sales of $19,642,692 reconcile to $18,926,266 net after $716,426 of returns, across 44,715 orders.</p>
+          <details>
+            <summary>Findings and limits</summary>
+            <p>Revenue is concentrated in customers, not products. The top ten customers carry $2,660,068, or 16.3% of net sales, with one account alone at 3.5%. The top ten products carry $1,443,504, only 7.6%, and the largest reaches just 1.7%. A short head of customers against a long tail of assortment calls for a different commercial response to each.</p>
+            <p>One product was hiding as three. StockCode 85099B appears under three different descriptions in the source data. Grouped by description each fragment looks mid-tier; grouped by the actual product key it totals $180,512. An assortment decision taken on the description field would have understated it by roughly two thirds.</p>
+            <p class="note">Cancellations and non-product lines such as postage and adjustments are flagged rather than deleted, so the return rate stays measurable and revenue still reconciles to source. December 2011 is a partial month: the data ends on 9 December.</p>
+          </details>
+          <div class="links"><a href="https://github.com/Zosmano/retail-sales-bi-model" target="_blank" rel="noopener">Model, documentation and README on GitHub</a></div>
+        </div>
+      </article>
+
+      <article class="feat">
+        <div class="feat-head">
           <span class="tag">Primary survey data</span>
           <p class="result">98% pay by mobile money. 22% trust AI to tax them fairly.</p>
           <p class="stack">Python, survey statistics, dashboards</p>
